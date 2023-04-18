@@ -254,6 +254,7 @@ const WhatsAppModal = ({ open, onClose, whatsAppId }) => {
                     type="token"
                     fullWidth
                     name="token"
+                    minlength="8"
                     variant="outlined"
                     margin="dense"
                   />
