@@ -14,21 +14,24 @@ import Container from "@material-ui/core/Container";
 import { i18n } from "../../translate/i18n";
 
 import { AuthContext } from "../../context/Auth/AuthContext";
+import { versionSystem } from "../../../package.json";
+import { nomeEmpresa } from "../../../package.json";
+
 import logo from "../../assets/logoLoginOption.png";
 
 
-// const Copyright = () => {
-// 	return (
-// 		<Typography variant="body2" color="textSecondary" align="center">
-// 			{"Copyleft "}
-// 			<Link color="inherit" href="https://github.com/canove">
-// 				Canove
-// 			</Link>{" "}
-// 			{new Date().getFullYear()}
-// 			{"."}
-// 		</Typography>
-// 	);
-// };
+ const Copyright = () => {
+ 	return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      © {new Date().getFullYear()}
+      {" - "}
+      <Link color="inherit" href="#">
+        { nomeEmpresa } - v { versionSystem }
+      </Link>
+      {"."}
+    </Typography>
+  );
+};
 
 const useStyles = makeStyles(theme => ({
 	paper: {
@@ -71,7 +74,7 @@ const Login = () => {
 			<CssBaseline />
 			<div className={classes.paper}>
 				<div>
-					<img style={{ margin: "0 auto", height: "80px", width: "100%" }} src={logo} alt="Whats" />
+					<img style={{ margin: "0 auto", height: "80px", width: "100%" }} src={logo} alt="Sonic Bot" />
 				</div>
 				{/* <Typography component="h1" variant="h5">
 					{i18n.t("login.title")}
@@ -115,7 +118,7 @@ const Login = () => {
 					
 				</form>
 			</div>
-			<Box mt={8}>{/* <Copyright /> */}</Box>
+			<Box mt={8}><Copyright /></Box>
 		</Container>
 	);
 };
