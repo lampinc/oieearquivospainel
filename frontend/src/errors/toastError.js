@@ -34,7 +34,7 @@ const toastError = err => {
 		toast.error(err);
 		return
 	} else {
-		toast.error("Um erro ocorreu!");
+		toast.error("Ocorreu um erro!");
 		return
 	}
 };
