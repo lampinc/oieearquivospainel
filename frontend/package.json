@@ -1,6 +1,8 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "nomeEmpresa": " Sonic Bot: Sonic ISP",
+  "versionSystem": "3.0.0",
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^2.14.0",
